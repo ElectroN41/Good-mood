@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Teddy Day, My Love!</title>
+    <style>
+        body {
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #FFE4E6, #FFB6C1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        h1 {
+            color: #DB2777;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            animation: bounce 1s infinite;
+        }
+
+        .teddy-bear {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 1.5rem;
+        }
+
+        .body {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #8B4513;
+            border-radius: 50%;
+            animation: breathe 2s infinite ease-in-out;
+        }
+
+        .ear {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #8B4513;
+            border-radius: 50%;
+            top: -10px;
+        }
+
+        .ear.left {
+            left: 5px;
+        }
+
+        .ear.right {
+            right: 5px;
+        }
+
+        .eye {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: black;
+            border-radius: 50%;
+            top: 45px;
+        }
+
+        .eye.left {
+            left: 35px;
+        }
+
+        .eye.right {
+            right: 35px;
+        }
+
+        .nose {
+            position: absolute;
+            width: 25px;
+            height: 15px;
+            background-color: #4A2500;
+            border-radius: 50%;
+            top: 70px;
+            left: 62px;
+        }
+
+        .mouth {
+            position: absolute;
+            width: 50px;
+            height: 20px;
+            border-bottom: 4px solid #4A2500;
+            border-radius: 50%;
+            top: 90px;
+            left: 50px;
+        }
+
+        p {
+            font-size: 1rem;
+            text-align: center;
+            color: #9D174D;
+            margin-bottom: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        button {
+            background-color: #EC4899;
+            color: white;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #DB2777;
+            transform: scale(1.1);
+        }
+
+        #special-message {
+            display: none;
+            margin-top: 1.5rem;
+            font-size: 1.25rem;
+            color: #DB2777;
+            font-weight: 600;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .heart {
+            display: inline-block;
+            color: red;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes breathe {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .teddy-bear {
+                width: 120px;
+                height: 120px;
+            }
+
+            .eye {
+                width: 12px;
+                height: 12px;
+            }
+
+            .nose {
+                width: 20px;
+                height: 12px;
+                left: 50px;
+            }
+
+            .mouth {
+                width: 40px;
+                height: 15px;
+                left: 40px;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            button {
+                font-size: 0.9rem;
+            }
+
+            #special-message {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>I want To Tell You Something, Prerna!  <br>
+        
+    </h1>
+
+    <div class="teddy-bear">
+        <div class="body"></div>
+        <div class="ear left"></div>
+        <div class="ear right"></div>
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="nose"></div>
+        <div class="mouth"></div>
+    </div>
+
+    <p>You're as cuddly and sweet as a teddy bear! </p>
+
+    <button onclick="showMessage()">Click for a Nirupam's special message!</button>
+
+    <div id="special-message">
+        "I know you were feeling a little off sometime, but just remember—no matter what, I'm here for you, always."<br>
+        "Let’s make a deal: You give me that cute little smile of yours, and I’ll do whatever it takes to keep it
+        there."<br>
+        "Smile for me? It’s my favorite view." 😘 <span class="heart">&hearts;</span>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('special-message').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
